@@ -1,0 +1,113 @@
+<!-- Dont edit this javascript bit... -->
+<script language = "JavaScript">
+<!-- Begin
+function textCounter(field, countfield, maxlimit) {
+   if(field.value.length > maxlimit){
+      field.value = field.value.substring(0, maxlimit);
+   }
+   else{ 
+      countfield.value = maxlimit - field.value.length;
+   }
+}
+function cleartagboard() {
+    document.tagboard.cjmsg.value="";
+}  
+function popUp(URL) {
+    day = new Date();
+    id = day.getTime();
+    eval("page" + id + " = window.open(URL, '" + id + "', 'toolbar=0,scrollbars=no,location=0,statusbar=0,menubar=0,resizable=0,width=300,height=250,left = 262,top = 184');");
+}
+var isNav, isIE
+if (parseInt(navigator.appVersion) >= 4) {
+  if (navigator.appName == "Netscape")
+    isNav = true
+  else
+    isIE = true
+}
+function showKeyValue(evt) {
+  var keyValue
+  if (isNav) 
+    keyValue = evt.which
+  else
+    keyValue = window.event.keyCode
+        
+  if (keyValue == 13) {
+    javascript:document.tagboard.submit();
+  }
+  return false
+}
+// End -->
+</script>
+
+<!-- Change the location of the stylesheet if needs be 	-->
+<link rel="stylesheet" href="stylesheet.php" type="text/css">
+
+<!-- Change the table "width=100" to change the width of your tag board		-->
+<!-- Change the table "height=200" to change the height of your tag board		-->
+<!-- Change the border colour or size by editing "border:1 solid #HEXCOLOR"		-->
+<!-- For No Border, Delete >>>   style="border: 1 solid #000000"			 	-->
+
+<table width=150 border=0 bgcolor="#FFFFFF" style="border: 1 solid #000000">
+<tr><td><iframe name="tag" border="0" frameborder="0" width="100%" height="200" align="center" src="display.php" target="_blank"></iframe></td></tr>
+<tr><td>
+<form method="POST" action="tag.php" target="tag" name="tagboard">
+        <table width="100%" border="0" cellspacing="1">
+          <tr>
+            <td>
+
+  <table border="0" cellspacing="0" width="100%" cellpadding="0">
+    <tr>
+      <td width="1%"><font class="cjfont"><small>Name:</small></FONT></td>
+    </center>
+    <td width="99%">
+      <p align="right"><font class="cjfont"><small>[</small><A class="cjfont" HREF="javascript:cleartagboard()"><small>Reset Tag</small></A><small>]</small></FONT></td>
+  </tr>
+  </table>
+
+  <!-- Change the input size to change the length of the name field 			-->
+<!-- Change the input length by changing maxlength="30" to your desired size 	-->
+
+<input size="20" class="cjmsg" maxlength="30" type="text" name="name">
+
+            </td>
+          </tr>
+          <tr>
+            <td>
+
+<!-- Change the input size to change the length of the tag field 				-->
+<!-- Change the input length by changing all the "200(s)" to your desired size 	-->
+
+<font class="cjfont"><small>Message:</small></FONT><br />
+<textarea class="cjmsg" rows="3" onKeyDown="textCounter(this.form.cjmsg,this.form.rem,200);" onKeyUp="textCounter(this.form.cjmsg,this.form.rem,200);" onKeyPress="showKeyValue(event)" cols="20" type="text" name="cjmsg"></textarea>
+
+            </td>
+          </tr>
+          <tr>
+            <td>
+
+<div align="center">
+  <center>
+  <table border="0" cellspacing="0" width="100%">
+    <tr>
+      <td width="1%">
+
+ <!-- Delete this input thing if you dont want to show the remaining characters -->
+<!-- Change the input initial length by changing the 200 to your desired size 	-->
+
+<input readonly class="cjmsg" type=text name=rem size=3 maxlength=3 value="200"></td>
+      <td width="1%"><input type="submit" class="cjmsg" value="‘—M">
+
+      </td>
+      <td width="49%"><input type="button" class="xtra" value="CJ Tag!" OnClick="popUp('insert.php')">
+
+      </td>
+    </tr>
+  </table>
+  </center>
+</div>
+            </td>
+          </tr>
+        </table>
+</td></tr>
+</table>
+</form>

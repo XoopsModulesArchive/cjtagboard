@@ -1,0 +1,3 @@
+<small><b><a href="javascript:popUp('details.php?name=James:&ip=62.254.0.41&agent=Mozilla/4.0 (compatible; MSIE 6.0; Windows 98)&date=Thursday 19 June - 2003&time=6:46:34 pm')" title="View Details"><img src="e/ip.gif" border ="0"> James:</a></b><br /><!--@-->Testing Edit Now<!--#--><br /></small>
+
+

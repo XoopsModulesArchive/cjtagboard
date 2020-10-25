@@ -1,0 +1,41 @@
+CJ Tag Board (XOOPS)
++--------------------------------------------+
+オリジナルスクリプト配布サイト
+http://www.cj-design.com/
++--------------------------------------------+
+モジュール作成
+http://www.rc-net.jp/xoops/
+サイドブロック表示タイプ
++--------------------------------------------+
+ファイルのダウンロード「cjtagboard.zip」
+ファイルを解凍し「config.php」を編集
+
+編集箇所
+$user = "admin";
+$pass = "password";
+
+$yourname = "Your Name";
+$email = "yourname@email.com";
+$yourwebsite = "CJ Website Design";
+
+その他編集項目については自分流にアレンジして下さい。
+
+準備が整ったらサーバにアップロード
+アップロード先ディレクトリ　/modules/ここに入れて
+以下ファイルのアクセス権を書き込み可とする
+stats.txt    CHMOD 777
+tag.txt    CHMOD 777
+alltag.txt    CHMOD 777
+tagcount.txt    CHMOD 777
+ipban.php    CHMOD 777
+flood.php    CHMOD 777
+
+投稿データの編集及び削除方法
+サイドブロック 「CJ Tag Board」表示画面から
+adminをクリック、ログイン画面表示にて、ユーザー名、パスワードを入力
+Enter Admin Areaボタンをクリック
+Click Here to Continue.... ここをクリック
+編集又は削除したい項目を選択する。
+
+
+
